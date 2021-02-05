@@ -95,6 +95,9 @@ namespace Dicom
                     return Encoding.GetEncoding("iso-2022-jp"); // JIS X 0212 (Kanji) Extended
                 case "ISO 2022 IR 166":
                     return Encoding.GetEncoding("windows-874"); // TIS 620-2533 (Thai) Extended
+                case "ISO 2022 IR 58":
+                    return Encoding.GetEncoding("gb2312"); // Simplified Chinese
+                case "GBK":
                 case "GB18030":
                     return Encoding.GetEncoding("GB18030"); // Chinese (Simplified) Extended
                 default: // unknown encoding... return ASCII instead of throwing exception
@@ -155,6 +158,8 @@ namespace Dicom
                 //case 50222: return "ISO 2022 IR 87";	// JIS X 0208 (Kanji) Extended
                 case "iso-2022-jp":
                     return "ISO 2022 IR 159"; // JIS X 0212 (Kanji) Extended
+                case "gb2312":
+                    return "ISO 2022 IR 58"; // Simplified Chinese
                 case "GB18030":
                 case "gb18030":
                     return "GB18030"; // Chinese (Simplified) Extended

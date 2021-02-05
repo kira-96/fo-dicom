@@ -22,7 +22,8 @@ namespace Dicom
         public void GetEncoding_NonMatchingCharset_ReturnsUSASCII()
         {
             var expected = Encoding.ASCII.CodePage;
-            var actual = DicomEncoding.GetEncoding("GBK").CodePage;
+            // var actual = DicomEncoding.GetEncoding("GBK").CodePage; // GBK should supported now
+            var actual = DicomEncoding.GetEncoding(@"\GBK").CodePage;
             Assert.Equal(expected, actual);
         }
       

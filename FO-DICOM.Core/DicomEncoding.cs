@@ -85,8 +85,10 @@ namespace FellowOakDicom
                 "ISO 2022 IR 149" => Encoding.GetEncoding("x-cp20949"), // KS X 1001 (Hangul and Hanja) Extended
                 "ISO 2022 IR 159" => Encoding.GetEncoding("iso-2022-jp"), // JIS X 0212 (Kanji) Extended
                 "ISO 2022 IR 166" => Encoding.GetEncoding("windows-874"), // TIS 620-2533 (Thai) Extended
+                "ISO 2022 IR 58" => Encoding.GetEncoding("gb2312"), // Simplified Chinese
+                "GBK" => Encoding.GetEncoding("GB18030"),
                 "GB18030" => Encoding.GetEncoding("GB18030"), // Chinese (Simplified) Extended
-               _ => Default // unknown encoding... return ASCII instead of throwing exception
+                _ => Default // unknown encoding... return ASCII instead of throwing exception
             };
         }
 
@@ -115,6 +117,7 @@ namespace FellowOakDicom
                 "iso-8859-8" => "ISO 2022 IR 138", // Hebrew Extended
                 "iso-8859-9" => "ISO 2022 IR 148", // Latin Alphabet No. 5 (Turkish) Extended
                 "iso-2022-jp" => "ISO 2022 IR 159", // JIS X 0212 (Kanji) Extended
+                "gb2312" => "ISO 2022 IR 58", // Simplified Chinese
                 "gb18030" => "GB18030",
                 "GB18030" => "GB18030", // Chinese (Simplified) Extended
                 "utf-8" => "ISO_IR 192", // Unicode in UTF-8
